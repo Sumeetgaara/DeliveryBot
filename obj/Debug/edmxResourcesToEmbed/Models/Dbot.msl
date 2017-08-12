@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBotDBModelStoreContainer" CdmEntityContainer="DBotDBEntities">
+    <EntitySetMapping Name="DbotTables">
+      <EntityTypeMapping TypeName="DBotDBModel.DbotTable">
+        <MappingFragment StoreEntitySet="DbotTable">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="toID" ColumnName="toID" />
+          <ScalarProperty Name="toName" ColumnName="toName" />
+          <ScalarProperty Name="fromID" ColumnName="fromID" />
+          <ScalarProperty Name="fromName" ColumnName="fromName" />
+          <ScalarProperty Name="serviceURL" ColumnName="serviceURL" />
+          <ScalarProperty Name="channelID" ColumnName="channelID" />
+          <ScalarProperty Name="conversationID" ColumnName="conversationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="adminTable1">
+      <EntityTypeMapping TypeName="DBotDBModel.adminTable1">
+        <MappingFragment StoreEntitySet="adminTable1">
+          <ScalarProperty Name="pwd" ColumnName="pwd" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

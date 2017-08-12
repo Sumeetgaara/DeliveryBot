@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBotDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="adminTable1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="150" />
+    <Property Name="pwd" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="DbotTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNumber" Type="nvarchar" MaxLength="150" />
+    <Property Name="Date" Type="nvarchar" MaxLength="150" />
+    <Property Name="Status" Type="nvarchar" MaxLength="150" />
+    <Property Name="toID" Type="nvarchar" MaxLength="150" />
+    <Property Name="toName" Type="nvarchar" MaxLength="150" />
+    <Property Name="fromID" Type="nvarchar" MaxLength="150" />
+    <Property Name="fromName" Type="nvarchar" MaxLength="150" />
+    <Property Name="serviceURL" Type="nvarchar" MaxLength="150" />
+    <Property Name="channelID" Type="nvarchar" MaxLength="150" />
+    <Property Name="conversationID" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityContainer Name="DBotDBModelStoreContainer">
+    <EntitySet Name="adminTable1" EntityType="Self.adminTable1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DbotTable" EntityType="Self.DbotTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBotDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DbotTable">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderNumber" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="toID" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="toName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="fromID" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="fromName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="serviceURL" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="channelID" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="conversationID" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="DBotDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DbotTables" EntityType="Self.DbotTable" />
+    <EntitySet Name="adminTable1" EntityType="DBotDBModel.adminTable1" />
+  </EntityContainer>
+  <EntityType Name="adminTable1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pwd" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
